@@ -1,6 +1,11 @@
 Git repositry for: Diabetes App
 
 
+Purpose:
+    This phone application is being created to assist medical practitioners by providing a streamlined workflow for
+    in-patient diabetes mangement. This is a cross platform application, built for iOS and Android devices through
+    the support of the Steroids.js framework. Typical users of this application are intended to be physicians.
+
 Project Frameworks:
     + Steroids JS (PhoneGap extension)
     + Angular JS
