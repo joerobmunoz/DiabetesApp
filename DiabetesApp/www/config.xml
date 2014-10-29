@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.appgyver.helloSteroids" version="3.1.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>DiaBuddies</name>
+    <description>
+        A mobile workflow and look up for prescriber tools relating to inpatient diabetes management for medical practitioners.
+    </description>
+    <author email="joe.rob.munoz@gmail.com" href="">
+        Joe Munoz
+    </author>
+    <access origin="*" />
+
+</widget>
