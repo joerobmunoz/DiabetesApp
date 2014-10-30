@@ -1,8 +1,9 @@
 [
   {
+  	"appName": "intakeCalculator",
     "id": 1,
     "name": "Initial Management of Hyperglycemia",
-    "nav-title": "Diabetes Calculator",
+    "navTitle": "Diabetes Calculator",
     "description": "Calculator."
   }
 ]

@@ -3,7 +3,7 @@
 	<p class="padding" style="font-size:medium;">Johns Hopkins Hospital, 2014</p>
 	<div ng-controller="IndexCtrl">
 	  <ul class="list">
-	    <li class="item item-icon-right" ng-click="open(main.id)" ng-repeat="main in mains">
+	    <li class="item item-icon-right" ng-click="open(main.appName)" ng-repeat="main in mains">
 	      {{ main.name }}
 	      <i class="icon ion-ios7-arrow-right"></i>
 	    </li>

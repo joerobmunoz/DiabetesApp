@@ -1,1 +1,5 @@
 /* Application wide non-native CSS rules */
+.content {
+	background-color: #1C4882;
+	font: #FFFFFF;
+}
