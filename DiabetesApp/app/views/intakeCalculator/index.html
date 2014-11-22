@@ -7,10 +7,22 @@
   </ul>
 </div>
  -->
-<div>
-	<div ng-controller="StatsCtrl">
-		<span>Weight <input type="text" min="0" max="900" placeholder="Weight">{{stats.weight}} kg</span>
-		<span>BMI <input type="text" min="0" max="999" placeholder="BMI">{{stats.BMI}}</span>
+<div ng-controller="StatsCtrl">
+	<span>Weight<input type="number" ng-model="stats.weight" min="0" max="999" placeholder="Weight" required style="width:50%;">{{stats.weight}} kg</span>
+	<br/>
+	<br/>
+	<span>BMI <input type="number" ng-model="stats.bmi" min="0" max="99" placeholder="BMI" required style="width:50%;">{{stats.bmi}}</span>
+	<br/>
+	<br/>
+	<!-- String: weight class indicator -->
+	<div>
+		Weight class: {{bmiClass}}
 	</div>
-	<span></span>
+	<!-- Individual toggles -->
+	<div>
+		<!-- <input type="checkbox" ng-model="over70">Over 70 Years Old: {{over70}}<br/>
+		<input type="checkbox" ng-model="pancreatectomy">Pancreatectomy: {{Pancreatectomy}}<br/> -->
+		<!-- Decrease ratio of basal nutrition -->
+		<!-- <input type="checkbox" ng-model="steroids">On Steroids: {{steroids}}<br/> -->
+	</div>
 </div>

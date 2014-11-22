@@ -41,7 +41,40 @@ intakeCalculatorApp.controller('ShowCtrl', function ($scope, $filter, IntakeCalc
 // Bind patient stats
 intakeCalculatorApp.controller('StatsCtrl', function($scope) {
   $scope.stats = {
-    weight: 165,
-    BMI: 26.6
+    weight:'',
+    bmi:''
   };
+
+  $scope.pancreatectomy = false;
+  $scope.steroids = false;
+  $scope.over70 = false;
+  $scope.bmiClass = 'Test'
+
+  function between(x, min, max) {
+    return x >= min && x <= max;
+  }
+
+   var computeBmiClass = function() {
+    if ($scope.stats.bmi <= 18.5) {
+      $scope.bmiClass = "Malnourished";
+    } else if (between($scope.stats.bmi, 18.51, 24.999)) {
+      $scope.bmiClass = "Lean";
+    } else if (between($scope.stats.bmi, 25, 30)) {
+      $scope.bmiClass = "Overweight";
+    } else {
+      $scope.bmiClass = "Obese";
+    }
+  }
+
+  $scope.$watch('stats.bmi', computeBmiClass);
+
+});
+
+intakeCalculatorApp.controller('PrescreenCtrl', function($scope) {
+  $scope.screening = {
+    dm1: 0,
+    dm2: 0,
+    pancreatectomy: 0,
+    steroids: 0
+  }
 });

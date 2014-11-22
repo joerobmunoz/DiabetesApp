@@ -19,5 +19,4 @@ mainApp.controller('IndexCtrl', function ($scope, MainRestangular) {
   // Native navigation
   steroids.view.navigationBar.show("Diabetes Applications");
   steroids.view.setBackgroundColor("#FFFFFF");
-
 });
