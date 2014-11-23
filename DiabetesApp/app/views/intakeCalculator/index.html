@@ -1,28 +1,30 @@
-<!-- <div ng-controller="IndexCtrl">
-  <ul class="list">
-    <li class="item item-icon-right" ng-click="open(intakeCalculator.id)" ng-repeat="intakeCalculator in intakeCalculators">
-      IntakeCalculator: {{ intakeCalculator.name }}
-      <i class="icon ion-ios7-arrow-right"></i>
-    </li>
-  </ul>
-</div>
- -->
+
 <div ng-controller="StatsCtrl">
-	<span>Weight<input type="number" ng-model="stats.weight" min="0" max="999" placeholder="Weight" required style="width:50%;">{{stats.weight}} kg</span>
-	<br/>
-	<br/>
-	<span>BMI <input type="number" ng-model="stats.bmi" min="0" max="99" placeholder="BMI" required style="width:50%;">{{stats.bmi}}</span>
-	<br/>
-	<br/>
+	<label class="item item-input">
+	  <span class="input-label">Weight</span>
+	  <input type="number" ng-model="stats.weight" min="0" max="999" placeholder="kg">
+	</label>
+	<label class="item item-input">
+	  <span class="input-label">BMI</span>
+	  <input type="number" ng-model="stats.bmi" min="0" max="99">
+	</label>
 	<!-- String: weight class indicator -->
-	<div>
-		Weight class: {{bmiClass}}
+	<div class="card">
+		<div class="item item-divider">
+			Weight Class
+		</div>
+		<div class="item item-text-wrap">
+			{{bmiClass[0]}}
+		</div>
+		<div class="item item-divider">
+			Estimated Total Daily Dose
+		</div>
+		<div class="item item-text-wrap">
+			{{tdd}} units/day
+		</div>
 	</div>
-	<!-- Individual toggles -->
-	<div>
-		<!-- <input type="checkbox" ng-model="over70">Over 70 Years Old: {{over70}}<br/>
-		<input type="checkbox" ng-model="pancreatectomy">Pancreatectomy: {{Pancreatectomy}}<br/> -->
-		<!-- Decrease ratio of basal nutrition -->
-		<!-- <input type="checkbox" ng-model="steroids">On Steroids: {{steroids}}<br/> -->
-	</div>
+
+	<button class="button button-block button-positive" ng-disabled="validateInputs()" ng-click="open()">
+	  Continue
+	</button>
 </div>

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Continuous tube feedings",
+    "view": "continous"
+  },
+  {
+    "id": 2,
+    "name": "Eating meals OR receiving bolus tube feedings",
+    "view": "eating"
+  },
+    {
+    "id": 3,
+    "name": "No enteral/parenteral nutrition OR on clear liquids",
+    "view": "clear"
+  },
+    {
+    "id": 4,
+    "name": "CPN or PPN Infusion",
+    "view": "infusion"
+  }
+]
