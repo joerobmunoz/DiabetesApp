@@ -1,5 +1,5 @@
 <div ng-controller="NutrtitionalStateCtrl" class="padding">
-	<li class="item item-icon-right item-text-wrap" ng-repeat="nutrition in nutritionalStates">
+	<li class="item item-icon-right item-text-wrap" ng-repeat="nutrition in nutritionalStates" ng-click="open(nutrition.view)">
 		{{ nutrition.name }}
 		<i class="icon ion-ios7-arrow-right"></i>
 	</li>

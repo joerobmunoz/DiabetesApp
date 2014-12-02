@@ -1,12 +1,11 @@
-
 <div ng-controller="StatsCtrl">
 	<label class="item item-input">
 	  <span class="input-label">Weight</span>
-	  <input type="number" ng-model="stats.weight" min="0" max="999" placeholder="kg">
+	  <input type="number" ng-model="stats.weight" min="0" max="999" placeholder="kg" autofocus>
 	</label>
 	<label class="item item-input">
 	  <span class="input-label">BMI</span>
-	  <input type="number" ng-model="stats.bmi" min="0" max="99">
+	  <input type="number" ng-model="stats.bmi" min="0" max="99" placeholder="0-99">
 	</label>
 	<!-- String: weight class indicator -->
 	<div class="card">
@@ -26,5 +25,6 @@
 
 	<button class="button button-block button-positive" ng-disabled="validateInputs()" ng-click="open()">
 	  Continue
+	  <i class="icon ion-ios7-arrow-right"></i>
 	</button>
 </div>
