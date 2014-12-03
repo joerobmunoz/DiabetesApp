@@ -1,36 +1,21 @@
-var intakeCalculatorApp = angular.module('intakeCalculatorApp', ['IntakeCalculatorModel', 'ngTouch']);
+"use strict";
 
-
-// Index: http://localhost/views/intakeCalculator/index.html
-
-// intakeCalculatorApp.controller('IndexCtrl', function ($scope, IntakeCalculatorRestangular) {
-
-//   // Helper function for opening new webviews
-//   $scope.open = function(id) {
-//     webView = new steroids.views.WebView("/views/intakeCalculator/show.html?id="+id);
-//     steroids.layers.push(webView);
-//   };
-
-//   // Fetch all objects from the local JSON (see app/models/intakeCalculator.js)
-//   // IntakeCalculatorRestangular.all('intakeCalculator').getList().then( function(intakeCalculators) {
-//   //   $scope.intakeCalculators = intakeCalculators;
-//   // });
-
-//   // Native navigation
-//   steroids.view.navigationBar.show("Intake Calculator");
-//   steroids.view.setBackgroundColor("#FFFFFF");
-// });
+var intakeCalculatorApp = angular.module("intakeCalculatorApp", ["IntakeCalculatorModel", "ngTouch"]);
 
 // Bind patient stats
-intakeCalculatorApp.controller('StatsCtrl', function($scope) {
+intakeCalculatorApp.controller("StatsCtrl", function($scope) {
+
+  // pre-load views
+  var webView = new steroids.views.WebView("/views/intakeCalculator/nutritionalState.html?tdd="+$scope.tdd);
+  webView.preload();
+
   $scope.stats = {
-    weight:'',
-    bmi:''
+    weight:"",
+    bmi:""
   };
 
-  $scope.bmiClass = '';
-  $scope.tdd = '';
-
+  $scope.bmiClass = "";
+  $scope.tdd = "";
 
   // Internal functions
   function between(x, min, max) {
@@ -39,7 +24,7 @@ intakeCalculatorApp.controller('StatsCtrl', function($scope) {
 
   var calculateTdd = function() {
     try {
-      if ($scope.stats.weight !== '' && $scope.bmiClass !== '') {
+      if ($scope.stats.weight !== "" && $scope.bmiClass !== "") {
         $scope.tdd = Math.round($scope.bmiClass[1] * $scope.stats.weight * 1000)/1000;
       }
     } catch (e) {
@@ -63,7 +48,7 @@ intakeCalculatorApp.controller('StatsCtrl', function($scope) {
 
   // External Functions
   $scope.validateInputs = function() {
-    if ($scope.stats.bmi !== '' && $scope.stats.weight !== '') {
+    if ($scope.stats.bmi !== "" && $scope.stats.weight !== "") {
       return false;
     } else {
       return true;
@@ -71,20 +56,19 @@ intakeCalculatorApp.controller('StatsCtrl', function($scope) {
   };
 
   $scope.open = function() {
-    webView = new steroids.views.WebView("/views/intakeCalculator/nutritionalState.html?tdd="+$scope.tdd);
     steroids.layers.push(webView);
   };
 
   // Observers
-  $scope.$watch('stats.bmi', computeBmiClass);
-  $scope.$watch('stats.weight', calculateTdd);
+  $scope.$watch("stats.bmi", computeBmiClass);
+  $scope.$watch("stats.weight", calculateTdd);
 });
 
 // Show: http://localhost/views/intakeCalculator/nutritionStates.html
-intakeCalculatorApp.controller('NutrtitionalStateCtrl', function ($scope, $filter, IntakeCalculatorRestangular) {
+intakeCalculatorApp.controller("NutrtitionalStateCtrl", function ($scope, $filter, IntakeCalculatorRestangular) {
 
   // Fetch all objects from the local JSON (see app/models/intakeCalculator.js)
-  IntakeCalculatorRestangular.all('nutritionStates').getList().then(function(nutritionalStates) {
+  IntakeCalculatorRestangular.all("nutritionStates").getList().then(function(nutritionalStates) {
     // Then select the one based on the view's id query parameter
     $scope.nutritionalStates = nutritionalStates;
   });
@@ -103,25 +87,18 @@ intakeCalculatorApp.controller('NutrtitionalStateCtrl', function ($scope, $filte
 });
 
 // Show: nutritionStats -> continuous/eating/etc.
-intakeCalculatorApp.controller('TddComponentsCtrl', function ($scope, $filter, IntakeCalculatorRestangular) {
+intakeCalculatorApp.controller("TddComponentsCtrl", function ($scope, $filter, IntakeCalculatorRestangular) {
 
   function round(num) {
       return Math.round(num * 1000)/1000;
   }
 
   $scope.tdd = steroids.view.params.tdd;
-  $scope.basilA = round($scope.tdd * .2);
-  $scope.basilB = round($scope.tdd * .1);
-  $scope.nutritional = round($scope.tdd * .8);
-  // Get TDD Components
-
-  // Check Glucose: "string"
-  // Basal
-  // Nutritional
-  // Correctional insulin: "string"
-
+  $scope.basilA = round($scope.tdd * 0.2);
+  $scope.basilB = round($scope.tdd * 0.1);
+  $scope.nutritional = round($scope.tdd * 0.8);
+  
   // Native navigation
   steroids.view.navigationBar.show("Nutrition States");
   steroids.view.setBackgroundColor("#FFFFFF");
-
 });
