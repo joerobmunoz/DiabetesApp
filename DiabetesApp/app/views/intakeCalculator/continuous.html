@@ -4,7 +4,7 @@
 			Check glucose:  q4h
 		</div>
 		<div class="item item-divider">
-			Basal Insulin, 20% TDD
+			Basal Insulin, 20% TDD : ({{ tddPercentage(0.2) }} units)
 		</div>
 		<div class="item item-text-wrap">
 			If Glargine:<br/>
@@ -15,10 +15,14 @@
 			give {{ tddPercentage(0.1) }} with b'fast, {{ tddPercentage(0.1) }} qhs
 		</div>
 		<div class="item item-divider">
-			Nutritional Insulin, 80% TDD
+			Nutritional Insulin, 80% TDD : ({{ tddPercentage(0.8) }} units)
 		</div>
 		<div class="item item-text-wrap">
-			{{ tdd }} units/day
+			<ul style="list-style-type:disc">
+			  <li>Providede as Aspart, administered q4h.</li>
+			  <li>Divide equally into 6 daily doses ( {{ tddPercentage(0.8 * (1/6)) }} per dose)
+			  <li>Hold for BG < 100mg/dL or if TF disrupted > 2 h</li>
+			</ul>
 		</div>
 		<div class="item item-divider">
 			Correctional Insulin

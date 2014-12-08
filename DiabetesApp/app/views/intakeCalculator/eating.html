@@ -4,7 +4,7 @@
 			Check glucose:  qac and qhs
 		</div>
 		<div class="item item-divider">
-			Basal Insulin, 40% TDD
+			Basal Insulin, 40% TDD : ({{ tddPercentage(0.4) }} units)
 		</div>
 		<div class="item item-text-wrap">
 			If Glargine:<br/>
@@ -15,16 +15,24 @@
 			give {{ tddPercentage(0.2) }} with b'fast, {{ tddPercentage(0.2) }} qhs
 		</div>
 		<div class="item item-divider">
-			Nutritional Insulin, 60% TDD
+			Nutritional Insulin, 60% TDD : ({{ tddPercentage(0.6) }} units)
 		</div>
 		<div class="item item-text-wrap">
-			{{ tdd }} units/day
+			<ul style="list-style-type:disc">
+			  <li>Providede as Aspart, given after each meal</li>
+			  <ul style="list-style-type:circle">
+				 <li>Divide dose equally by number of meals</li>
+				 OR
+				 <li>Utilize carb counting and consult endocrine if pt does this at home</li>
+				</ul>  
+			  <li>HOLD dose if nutritional intake < 50%/li>
+			</ul>
 		</div>
 		<div class="item item-divider">
 			Correctional Insulin
 		</div>
 		<div class="item item-text-wrap">
-			q4h Aspart. Choose scale based on TDD
+			MEALtime and BEDtime Aspart. Choose scale based on TDD
 		</div>
 	</div>
 </div>
