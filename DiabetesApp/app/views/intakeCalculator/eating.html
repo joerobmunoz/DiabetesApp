@@ -1,21 +1,21 @@
 <div ng-controller="TddComponentsCtrl" class="padding">
 	<div class="card">
 		<div class="item item-divider">
-			Check glucose:  q4h
+			Check glucose:  qac and qhs
 		</div>
 		<div class="item item-divider">
-			Basal Insulin, 20% TDD
+			Basal Insulin, 40% TDD
 		</div>
 		<div class="item item-text-wrap">
 			If Glargine:<br/>
-			give {{ tddPercentage(0.2) }} q 24 hrs, as time critical order
+			give {{ tddPercentage(0.4) }} q 24 hrs, as time critical order
 		</div>
 		<div class="item item-text-wrap">
 			If NPH:<br/>
-			give {{ tddPercentage(0.1) }} with b'fast, {{ tddPercentage(0.1) }} qhs
+			give {{ tddPercentage(0.2) }} with b'fast, {{ tddPercentage(0.2) }} qhs
 		</div>
 		<div class="item item-divider">
-			Nutritional Insulin, 80% TDD
+			Nutritional Insulin, 60% TDD
 		</div>
 		<div class="item item-text-wrap">
 			{{ tdd }} units/day

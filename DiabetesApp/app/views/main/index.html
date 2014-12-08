@@ -1,12 +1,12 @@
 <div style="color: #FFFFFF;text-align: center;">
-	<p class="padding" style="font-size:large;margin-top:20px;">Prescriber Tools for Inpatient Diabetes Management</p>
-	<!-- <p class="padding" style="font-size:medium;">Johns Hopkins Hospital, 2014</p> -->
+	<p class="padding" style="font-size:large;margin-top:20px;">
+		Prescriber Tools for Inpatient Diabetes Management
+	</p>
 	<div ng-controller="IndexCtrl">
-	  <ul class="list">
-	    <li class="item item-icon-right" ng-click="open(main.appName)" ng-repeat="main in mains">
-	      {{ main.name }}
-	      <i class="icon ion-ios7-arrow-right"></i>
-	    </li>
-	  </ul>
+		<div class="item" ng-click="open(main.appName)" ng-repeat="main in mains" style="margin:0 30px 0 30px;">
+		    <div class="ion-calculator"></div>
+		    <h2>{{ main.navTitle }}</h2>
+		    <p>{{ main.name }}</p>
+		</div>
 	</div>
 </div>

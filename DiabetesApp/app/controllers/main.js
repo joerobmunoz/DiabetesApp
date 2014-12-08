@@ -1,13 +1,20 @@
-var mainApp = angular.module('mainApp', ['MainModel', 'ngTouch']);
+"use strict";
 
+var mainApp = angular.module("mainApp", ["MainModel", "ngTouch"]);
 
 // Index: http://localhost/views/main/index.html
-mainApp.controller('IndexCtrl', function ($scope, MainRestangular) {
+mainApp.controller("IndexCtrl", function ($scope, MainRestangular) {
+
+  // Pre-load views
+  var webView = new steroids.views.WebView("/views/intakeCalculator/index.html");
+  webView.preload();
 
   // Helper function for opening new webviews by application
-  $scope.open = function(appName) {  
-    //webView = new steroids.views.WebView("/views/main/show.html?id="+id);
-    webView = new steroids.views.WebView("/views/" + appName + "/index.html");
+  $scope.open = function(appName) {
+    if (appName !== "intakeCalculator") {
+      webView = new steroids.views.WebView("/views/" + appName + "/index.html");
+    }
+
     steroids.layers.push(webView);
   };
 
