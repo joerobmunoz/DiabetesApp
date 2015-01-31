@@ -19,3 +19,9 @@ Upload Application Mockup to Phone:
 
 Build additional angular resources:
     - "steroids generate ng-resource"
+
+
+
+DISCLAIMER:
+
+You are liable for any consequences that result from using this application for consult regarding medical treatment.
