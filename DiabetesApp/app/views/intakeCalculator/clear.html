@@ -1,0 +1,27 @@
+<div ng-controller="TddComponentsCtrl" class="padding">
+	<div class="card">
+		<div class="item item-divider">
+			Check glucose:  q4h
+		</div>
+		<div class="item item-divider">
+			Basal Insulin, 40% TDD : ({{ tddPercentage(0.4) }} units)
+		</div>
+		<div class="item item-text-wrap">
+			If Glargine:<br/>
+			give {{ tddPercentage(0.4) }} q 24 hrs, as time critical order
+		</div>
+		<div class="item item-text-wrap">
+			If NPH:<br/>
+			give {{ tddPercentage(0.2) }} qam, {{ tddPercentage(0.2) }} qhs
+		</div>
+		<div class="item item-divider">
+			Nutritional Insulin, NONE
+		</div>
+		<div class="item item-divider">
+			Correctional Insulin
+		</div>
+		<div class="item item-text-wrap">
+			q4h Aspart. Choose scale based on TDD
+		</div>
+	</div>
+</div>
