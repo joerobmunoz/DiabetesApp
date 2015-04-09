@@ -1,4 +1,4 @@
-<h1>Git repositry for: Diabetes App</h1>
+Git repositry for: Diabetes App
 
 
 Purpose:
