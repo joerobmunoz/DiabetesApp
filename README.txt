@@ -1,4 +1,4 @@
-Git repositry for: Diabetes App
+<h1>Git repositry for: Diabetes App</h1>
 
 
 Purpose:
@@ -24,4 +24,5 @@ Build additional angular resources:
 
 DISCLAIMER:
 
-You are liable for any consequences that result from using this application for consult regarding medical treatment.
+You are liable for any consequences that result from use of this application. For accurate medical advice, please
+consult a certified medical authority.
