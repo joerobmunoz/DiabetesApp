@@ -12,10 +12,14 @@
 
 <h3>Upload</h3>
 Upload Application Mockup to Phone:
-    1. Navigate to project directory.
-    2. "steroids connect -watch"
+<ol>
+    <li>Navigate to project directory.</li>
+    <li>"steroids connect -watch"
+    <ul><li>
         a. Initializes a server and generates a QR code in the browser.
-    3. Use the AppGyver Scanner app to pull down and mock the application.
+    </li></ul>
+    <li>Use the AppGyver Scanner app to pull down and mock the application.</li>
+</ol>
 
 Build additional angular resources:
     - "steroids generate ng-resource"
