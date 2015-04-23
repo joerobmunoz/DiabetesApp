@@ -1,5 +1,4 @@
-Git repositry for: Diabetes App
-
+<h1>Diabetes App</h1>
 
 Purpose:
     This phone application is being created to assist medical practitioners by providing a streamlined workflow for
