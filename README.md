@@ -7,7 +7,7 @@
 
 <h3>Project Frameworks</h3>
     <ul>
-        <li>Steroids JS (PhoneGap extension)<li>
+        <li>Steroids JS (PhoneGap extension)</li>
         <li>Angular JS</li>
     </ul>
 
