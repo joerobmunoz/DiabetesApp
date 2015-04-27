@@ -1,9 +1,9 @@
 <h1>Diabetes App</h1>
 
 <h3>Purpose</h3>
-    This phone application is being created to assist medical practitioners by providing a streamlined workflow for
-    in-patient diabetes mangement. This is a cross platform application, built for iOS and Android devices through
-    the support of the Steroids.js framework. Typical users of this application are intended to be physicians.
+This phone application is being created to assist medical practitioners by providing a streamlined workflow for
+in-patient diabetes mangement. This is a cross platform application, built for iOS and Android devices through
+the support of the Steroids.js framework. Typical users of this application are intended to be physicians.
 
 <h3>Project Frameworks</h3>
 <ul>
