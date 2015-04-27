@@ -6,8 +6,10 @@
     the support of the Steroids.js framework. Typical users of this application are intended to be physicians.
 
 <h3>Project Frameworks</h3>
-    + Steroids JS (PhoneGap extension)
-    + Angular JS
+    <ul>
+        <li>Steroids JS (PhoneGap extension)<li>
+        <li>Angular JS</li>
+    </ul>
 
 
 <h3>Upload</h3>
